@@ -1,0 +1,22 @@
+<h2>Service in Typescript</h2>
+<pre><code style="max-height: 500px;">
+import {Inject, Service} from "../decorators";
+
+@Inject('dep1', 'dep2')
+@Service({
+    name: 'exampleService'
+})
+class ExampleService {
+    private dep1: string;
+    private dep2: string;
+
+    constructor(dep1, dep2) {
+        this.dep1 = dep1;
+        this.dep2 = dep2;
+    }
+
+    method(): string {
+        return this.dep1 + this.dep2;
+    }
+}
+</code></pre>

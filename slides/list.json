@@ -1,4 +1,25 @@
 [
     "title.html",
-    "timeline.html"
+    [
+        "whyDecorators/index.html",
+        "whyDecorators/angularES5Service.html",
+        "whyDecorators/angularES6Service.html",
+        "whyDecorators/angularTypescriptService.html",
+    ],
+    [
+        "howItWorks/index.html",
+        "howItWorks/decoratorStructure.html",
+        "howItWorks/decoratorTesting.html"
+    ],
+    [
+        "useCases/index.html",
+        "useCases/service.html",
+        "useCases/filter.html",
+        "useCases/run.html",
+        "useCases/config.html",
+        "useCases/controller.html",
+        "useCases/route.html",
+        "useCases/directive.html"
+    ],
+    "QA.html"
 ]

@@ -1,0 +1,14 @@
+<pre><code>
+...
+inject(...dependencies): MethodDecorator | ClassDecorator {
+    return (target: any, propertyKey: string, descriptor: PropertyDescriptor) => {
+        if (descriptor) {
+            const fn = descriptor.value;
+            fn.$inject = dependencies;
+        } else {
+            target.$inject = dependencies;
+        }
+    };
+}
+...
+</code></pre>

@@ -1,0 +1,12 @@
+<h2>Service in ES5</h2>
+<pre><code>
+function ExampleService(dep1, dep2) {
+    this.method = function () {
+        return dep1 + dep2;
+    }
+}
+
+ExampleService.$inject = ['dep1', 'dep2'];
+
+angular.service('exampleService', ExampleService);
+</code></pre>

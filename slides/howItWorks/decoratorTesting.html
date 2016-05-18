@@ -1,0 +1,26 @@
+<pre><code>
+...
+describe('Inject', () => {
+    it('should inject dependencies to class', () => {
+        //start-non-standard
+        @Inject('test1', 'test2')
+        //end-non-standard
+        class NgFilter {}
+
+        expect(angular.injector().annotate(NgFilter)).toEqual(['test1', 'test2']);
+    });
+
+    it('should inject dependencies into function', () => {
+        class NgFilter {
+            //start-non-standard
+            @Inject('test1', 'test2')
+            //end-non-standard
+            static functionInject() {}
+        }
+
+        expect(NgFilter.functionInject.$inject).toEqual(['test1', 'test2']);
+        expect(angular.injector().annotate(NgFilter)).toEqual([]);
+    });
+});
+...
+</code></pre>
